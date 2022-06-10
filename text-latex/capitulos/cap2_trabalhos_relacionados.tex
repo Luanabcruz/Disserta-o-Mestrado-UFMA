@@ -1,0 +1,91 @@
+\chapter{Trabalhos relacionados}
+\phantom{0}
+\label{sec:trabRelacionados}
+
+Na literatura existem trabalhos que tratam do mesmo problema abordado pelo método proposto, ou seja, métodos desenvolvidos para auxiliar especialistas no diagnóstico das categorias da camada lipídica do filme lacrimal. A seguir são apresentados resumos dos trabalhos pesquisados organizados por ano e base de imagens.
+
+No trabalho mais recente, \citeonline{inbookMachineLearning} explicam como as técnicas de aprendizado de máquina podem ser aplicadas em alguns testes médicos para a Síndrome do Olho Seco. Os autores examinaram os principais passos para a classificação automática dos padrões de camada lipídica com análise de textura baseado em matriz de coocorrência no espaço de cor L*a*b*. O trabalho foi avaliado usando 105 imagens da base VOPTICAL\_I1 adquiridas com o Tearscope Plus. Análises detalhadas foram fornecidas com a conclusão de que os melhores desempenhos foram alcançados pelos classificadores \textit{Support Vector Machine} (SVM) e \textit{Multilayer Perceptron} (MLP), ambos apresentaram o resultado de 96\% de acurácia.
+
+No trabalho proposto em \citeonline{remeseiro2014methodology} foram utilizadas informações de cor e textura para caracterizar as categorias da camada lipídica, e seleção de características para reduzir o tempo de processamento. As imagens do filme lacrimal foram analisadas em escala de cinza, cores L*a*b* e RGB. Foram utilizadas cinco técnicas de análise de textura: filtro \textit{Butterworth}, transformada discreta de \textit{Wavelet}, campos aleatórios de \textit{Markov} e filtro de \textit{Gabor} \cite{ccesmeli2001texture}, e características de matrizes de coocorrência. Após a extração de características, os algoritmos de seleção de características baseados em correlação (CFS) \cite{hall1999correlation}, em consistência \cite{dash2003consistency} e INTERACT \cite{zhao2007searching} foram aplicados com o intuito de melhorar o desempenho dos classificadores. Os autores utilizaram 105 imagens da base VOPTICAL\_I1 \cite{voptical_gcuvarpa_i1} e 406 imagens da base VOPTICAL\_Is \cite{voptical_gcuvarpa_is}, ambas adquiridas com o Tearscope Plus. Aplicando o SVM como classificador, os resultados alcançados foram 97,14\% de acurácia para as imagens da base VOPTICAL\_I1, e 93,84\% de acurácia para as imagens da base VOPTICAL\_Is.
+
+Já nos estudos de \citeonline{mendez2013evaluation} foi apresentado um método para avaliar o desempenho de classificação das categorias da camada lipídica do filme lacrimal através de uma rede neural artificial MLP. Para este propósito, foram extraídas características de coocorrência no espaço de cor L*a*b*. O método de tomada de decisão com múltiplos critérios chamado TOPSIS (Technique for Order
+of Preference by Similarity to Ideal Solution - Técnica para Ordem de Preferência por Semelhança com a Solução Ideal) foi usado para avaliar as diferentes técnicas de binarização, método de seleção de características (CFS) e número de camadas ocultas. Foram realizados experimentos utilizando imagens da base VOPTICAL\_I1, apresentando uma taxa de classificação de 95\% de acurácia.
+
+\citeonline{remeseiro2012statistical} apresentaram um estudo exaustivo sobre o problema em questão, utilizando diferentes métodos de análise de textura em três espaços de cores e diferentes algoritmos de aprendizado de máquina. Todos os métodos e classificadores foram testados usando as imagens da base VOPTICAL\_I1. Do conjunto de experimentos o que obteve melhor resultado foi analisando as características de coocorrência em conjunto com o classificador SVM, apresentando 96,19\% de acurácia.
+
+Em \citeonline{remeseiro2011colour} é apresentado um estudo comparativo de diferentes métodos de extração de textura e espaços de cores para gerar vetores de características. Foram utilizados os filtros \textit{Butterworth}, Transformada Discreta de \textit{Wavelet}, filtro de \textit{Gabor}, campos aleatórios de \textit{Markov} e características de coocorrência para análise de textura. Primeiramente foram aplicados todos esses descritores de textura usando imagens em escala de cinza e, em seguida, introduziram os espaços de cores L*a*b* e RGB. Os experimentos foram realizados aplicando as imagens da base VOPTICAL\_I1, alcançando no melhor resultado 96,19\% de acurácia utilizando o classificador SVM e as características de coocorrência no espaço de cor L*a*b*.
+
+\citeonline{ramos2011texture} propuseram um método para a classificação automática da camada lipídica do filme lacrimal baseado na detecção de uma região de interesse e na análise de suas características de baixo nível através de um banco de filtros passa banda. Analisaram o desempenho das bandas de frequência individuais e sua combinação utilizando diferentes espaços de cores e algoritmos de classificação. A combinação de canais de frequência, com o espaço de cor L*a*b* e o classificador SVM produziram o melhor resultado. A metodologia foi testada em um conjunto de imagens da base VOPTICAL\_I1, apresentando uma taxa de acurácia de 91,43\%.
+
+O iDEAS (\textit{Dry Eye Assessment System} - Sistema de Avaliação do Olho Seco) proposto em \citeonline{remeseiro2016ideas}, é um aplicativo baseado na \textit{web} para apoiar no diagnóstico da Síndrome do Olho Seco. As imagens de entrada adquiridas com o Tearscope Plus, foram submetidas a análise no espaço de cor L*a*b* para, posteriormente, analisar a textura de seus três componentes, aplicando a técnica de características de coocorrência. O método de seleção de característica CFS foi usado para reduzir o número de características e, portanto, os requisitos computacionais. O aplicativo foi testado em 128 imagens da base VOPTICAL\_I1-v2 \cite{voptical_gcuvarpa_i1-v2} adquiridas com o Tearscope Plus. Utilizando o SVM como classificador, o resultado obtido foi de 96,09\% de acurácia.
+
+No trabalho de \citeonline{calvo2010color} foi apresentada uma metodologia para classificar a camada lipídica lacrimal de acordo com a textura. O método utilizou o banco rotacionalmente invariante de filtros de passa banda e informações de cores, aplicando o algoritmo de k vizinho mais próximo \cite{nasrabadi2007pattern} para classificação. A metodologia proposta foi testada em um base privada composta por um conjunto de 91 imagens do filme lacrimal adquiridas com o Tearscope Plus. No geral, obtiveram resultados de classificação aproximadamente de 86,41\% de acurácia.
+
+Em \citeonline{remeseiro2015automatic} foi proposto um método que utiliza informações de cor e textura. As imagens são analisadas em três espaços de cores diferentes, utilizando-se a imagem em escala de cinza, no espaço de cor L*a*b* e as cores oponentes do espaço de cor RGB. Em seguida, características de textura são extraídas, utilizando métodos baseados em processamento de sinais (filtro \textit{Butterworth}, filtro de \textit{Gabor} e a Transformada Discreta de \textit{Wavelet}), método baseado em modelo (campos aleatórios de \textit{Markov}) e um método estatístico utilizando características de coocorrência. As características foram extraídas de 106 imagens da base VOPTICAL\_GCU \cite{voptical_gcuvarpa2013} adquiridas com o Interferômetro Doane. Posteriormente, foram classificadas utilizando os algoritmos de aprendizagem de máquina \textit{Naive Bayes}, \textit{Random Tree}, \textit{Random Forest} e SVM \cite{dean2014big}. O método apresentou resultados de 93,40\% de acurácia.
+
+No método proposto em \citeonline{villaverde2014feature} foram utilizados os filtros de \textit{Butterworth}, o filtro de \textit{Gabor}, a Transformada Discreta de \textit{Wavelet}, os campos aleatórios de \textit{Markov} e as características de matrizes de coocorrência para extrair características de textura. Essas características foram extraídas de imagens da base VOPTICAL\_GCU analisadas em escala de cinza e no espaço de cor L*a*b*. Em seguida, são utilizados os algoritmos de seleção de características CFS, filtro baseado em consistência e INTERACT, com o objetivo de selecionar as características mais relevantes e reduzir o tempo de processamento. O método alcançou 91,51\% de acurácia, utilizando como técnica de classificação o SVM.
+
+%O sistema CASDES (\textit{Computer-Aided System to Support Dry Eye} - Sistema Auxiliar por Computador para Apoiar o Olho Seco), proposto em \cite{remeseiro2016casdes} auxilia no diagnóstico da síndrome do olho seco utilizando informações de cor e textura. As imagens foram submetidas a análise no espaço de cores L*a*b*, seguida da extração de características utilizando técnicas de matrizes de coocorrência sobre seus três canais, posteriormente, o método de seleção de características CFS foi usado para reduzir o número de características. Foram utilizadas 50 imagens adquiridas com o Tearscope Plus (base VOPTICAL\_R \cite{voptical_gcuvarpa_r}) em seus experimentos, resultando em uma acurácia de 90.89\%, com a aplicação do classificador SVM.
+
+Os trabalhos apresentados neste capítulo são de grande relevância, pois obtiveram resultados significativos na tarefa de classificação das categorias da camada lipídica do filme lacrimal utilizando as diversas técnicas descritas na literatura. A~\autoref{tab:trabRelacionados} apresenta um resumo comparativo destes trabalhos, onde são detalhadas as técnicas de extração de características, base de imagens utilizadas e acurácia obtida.
+
+\begin{comment}
+\begin{table}[!ht]
+\caption{Resumo dos trabalhos relacionados.}
+\label{tab:trabRelacionados}
+\centering
+\onehalfspacing
+\rowcolors{1}{}{lightgray}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{cp{8cm}cccc}
+\hline
+\textbf{Trabalho} & \textbf{Técnica(s)} & \textbf{Base} & \textbf{Amostra} & \textbf{Acurácia} \\ \hline \hline
+(REMESEIRO et al., 2014) & Filtros \textit{Butterworth}, \textit{Gabor}, transformada discreta de \textit{Wavelet}, campos aleatórios de \textit{Markov} e coocorrência, seleção de características baseada em CFS, consistência e INTERACT & VOPTICAL\_I1 & 105 & 97,14\% \\
+(REMESEIRO et al., 2012) & Matriz de coocorrência em espaços de cores & VOPTICAL\_I1 & 105 & 96,19\% \\
+(REMESEIRO et al., 2011) & Filtros \textit{Butterworth}, \textit{Gabor}, transformada discreta de \textit{Wavelet}, campos aleatórios de \textit{Markov} e coocorrência & VOPTICAL\_I1 & 105 & 96,19\% \\
+(REMESEIRO et al., 2018) & Matriz de coocorrência no espaço de cor L*a*b* & VOPTICAL\_I1 & 105 & 96\% \\
+(MÉNDES et al., 2013) & Matriz de coocorrência, seleção de características CFS e método TOPSIS & VOPTICAL\_I1 & 105 & 95\% \\
+(RAMOS et al., 2011) & Banco de filtros passa banda & VOPTICAL\_I1 & 105 & 91,43\% \\ \hline
+(REMESEIRO et al., 2016) & Matriz de coocorrência, seleção de características CFS & VOPTICAL\_I1-v2 & 128 & 96,09\% \\ \hline
+(REMESEIRO et al., 2014) & Filtros \textit{Butterworth}, \textit{Gabor}, transformada discreta de \textit{Wavelet}, campos aleatórios de \textit{Markov} e coocorrência, seleção de características baseada em CFS, consistência e INTERACT & VOPTICAL\_Is & 406 & 93,84\% \\ \hline
+(CALVO et al., 2010) & Banco rotacionalmente invariante de filtros passa banda & PRIVADA & 91 & 86,41\% \\ \hline
+(REMESEIRO et al., 2015) & Processamento de sinais, modelo e estatístico & VOPTICAL\_GCU & 106 & 93,40\% \\
+(VILLAVERDE et al., 2014) & Processamento de sinais, modelo e estatístico e seleção de características CFS, consistência e INTERACT & VOPTICAL\_GCU & 106 & 91,51\% \\ \hline
+\end{tabular}
+}
+\end{table}
+\end{comment}
+
+\definecolor{lightgray}{gray}{0.94}
+\begin{table}[!ht]
+\caption{Resumo dos trabalhos relacionados.}
+\label{tab:trabRelacionados}
+\centering
+\onehalfspacing
+%\rowcolors{1}{}{lightgray}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{lcp{8cm}cccc}
+\cline{2-6} \parbox[t]{4mm}{\multirow{25}{*}{\rotatebox[origin=c]{90}{\textbf{Tearscope Plus}}}}
+ & \textbf{Trabalho} & \centering \textbf{Técnica(s)} & \textbf{Base} & \textbf{Amostra} & \textbf{Acurácia} \\ \cline{2-6} 
+ & (REMESEIRO et al., 2018) \cellcolor{lightgray} & Matriz de coocorrência no espaço de cor L*a*b* \cellcolor{lightgray} & VOPTICAL\_I1 \cellcolor{lightgray} & 105 \cellcolor{lightgray} & 96\% \cellcolor{lightgray}\\
+ & (REMESEIRO et al., 2014) & Filtros \textit{Butterworth}, \textit{Gabor}, transformada discreta de \textit{Wavelet}, campos aleatórios de \textit{Markov} e coocorrência, seleção de características CFS, consistência e INTERACT & VOPTICAL\_I1 & 105 & 97,14\% \\
+ & (MÉNDES et al., 2013) \cellcolor{lightgray} & Matriz de coocorrência, seleção de características CFS e método TOPSIS \cellcolor{lightgray} & VOPTICAL\_I1 \cellcolor{lightgray} & 105 \cellcolor{lightgray} & 95\% \cellcolor{lightgray}\\
+ & (REMESEIRO et al., 2012) & Matriz de coocorrência em espaços de cores & VOPTICAL\_I1 & 105 & 96,19\% \\
+ & (REMESEIRO et al., 2011) \cellcolor{lightgray} & Filtros \textit{Butterworth}, \textit{Gabor}, transformada discreta de \textit{Wavelet}, campos aleatórios de \textit{Markov} e coocorrência \cellcolor{lightgray} & VOPTICAL\_I1 \cellcolor{lightgray} & 105 \cellcolor{lightgray} & 96,19\% \cellcolor{lightgray}\\
+ & (RAMOS et al., 2011) & Banco de filtros passa banda & VOPTICAL\_I1 & 105 & 91,43\%\\ \cline{2-6} 
+ & (REMESEIRO et al., 2016) \cellcolor{lightgray} & Matriz de coocorrência, seleção de características CFS \cellcolor{lightgray} & VOPTICAL\_I1-v2 \cellcolor{lightgray} & 128 \cellcolor{lightgray} & 96,09\% \cellcolor{lightgray} \\ \cline{2-6} 
+ & (REMESEIRO et al., 2014) & Filtros \textit{Butterworth}, \textit{Gabor}, transformada discreta de \textit{Wavelet}, campos aleatórios de \textit{Markov} e coocorrência, seleção de características CFS, consistência e INTERACT & VOPTICAL\_Is & 406 & 93,84\% \\ \cline{2-6} 
+ & (CALVO et al., 2010) \cellcolor{lightgray} & Banco rotacionalmente invariante de filtros passa banda \cellcolor{lightgray} & PRIVADA \cellcolor{lightgray} & 91 \cellcolor{lightgray} & 86,41\% \cellcolor{lightgray}\\ \cline{2-6} \parbox[t]{5mm}{\multirow{4}{*}{\rotatebox[origin=c]{90}{\textbf{Int. Doane}}}}
+ & (REMESEIRO et al., 2015) & Processamento de sinais, modelo e estatístico & VOPTICAL\_GCU & 106 & 93,40\% \\
+ & (VILLAVERDE et al., 2014) \cellcolor{lightgray} & Processamento de sinais, modelo e estatístico e seleção de características CFS, consistência e INTERACT \cellcolor{lightgray} & VOPTICAL\_GCU \cellcolor{lightgray} & 106 \cellcolor{lightgray} & 91,51\% \cellcolor{lightgray}\\ \cline{2-6} 
+\end{tabular}
+}
+\end{table}
+
+Em geral, investigando os trabalhos relacionados pode-se observar que são promissoras as pesquisas de análise de textura para a extração de características de imagens na área da saúde, com intuito de auxiliar no diagnóstico da Síndrome do Olho Seco através da classificação das categorias da camada lipídica do filme lacrimal. Nesta dissertação, o objetivo é propor um novo método capaz de melhorar a descrição de padrões de texturas das imagens do filme lacrimal adquiridas com o Interferômetro Doane e Tearscope Plus, com a aplicação dos índices de diversidade filogenética e/ou a função K de \textit{Ripley}, e a utilização de vários classificadores para categorizar a camada lipídica com precisão e consistência.
+
+\section{Considerações Finais}
+
+Neste capítulo foi feita uma revisão das produções científicas relevantes relacionadas a classificação da camada lipídica do filme lacrimal. Foram apresentadas resumidamente as metodologias e resultados obtidos nesses trabalhos. Além disso, foram feitas considerações a respeito das diferenças entre as diversas abordagens apresentadas, afim de obter uma visão geral do que têm sido produzido pela comunidade científica em relação a este tema.
+
+No próximo capítulo, serão apresentados os conceitos teóricos fundamentais para o desenvolvimento deste trabalho.

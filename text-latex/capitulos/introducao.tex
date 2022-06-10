@@ -1,0 +1,74 @@
+\chapter{Introdução}
+%\addcontentsline{toc}{chapter}{\uppercase{INTRODUÇÃO}}
+\phantom{0}
+
+O filme lacrimal é uma estrutura de multicamadas que consiste nos seguintes elementos: uma camada lipídica externa, que é responsável por evitar a evaporação da água; uma camada aquosa intermediária, que assegura a nutrição da córnea e a protege de corpos estranhos; e uma camada mucosa interna, responsável pela adesão das lágrimas aos olhos formando uma película protetora transparente que umidifica o epitélio da córnea \cite{rolando2001ocular}. Um dos elementos-chave da avaliação do filme lacrimal é a análise da camada lipídica, que tem a importante função de reter o filme lacrimal retardando a evaporação. Consequentemente, uma deficiência nesta camada pode causar a Síndrome do Olho Seco evaporativo \cite{korb2002tear}.
+
+A Síndrome do Olho Seco é uma doença de condição crônica e progressiva que pode causar prejuízo na qualidade de vida com sintomas de alta prevalência \cite{janine2007epidemiology}. Atualmente pode ser diagnosticada por uma combinação de sintomas e sinais semelhantes descritos por seus pacientes, tais como: desconforto, danos na superfície ocular, irritação nos olhos, secura, queimação, ardor e visão embaçada \cite{begley2002use, listed2007definition}. Essas características são queixas comuns na população em geral, mais frequentemente entre mulheres do que homens \cite{moss2000prevalence}. No entanto, essa diferença é significativa apenas com o avanço da idade \cite{schaumberg2003prevalence}.
+
+Em geral, a prevalência da Síndrome do Olho Seco varia de 5 a 50\% da população \cite{STAPLETON2017334}. O desenvolvimento da Síndrome do Olho Seco é ocasionado pela incidência de vários fatores de risco que causam a instabilidade do filme lacrimal, como o uso de lentes de contato, cirurgia ocular, tabagismo, dieta, diabetes ou alergia, bem como estímulos ambientais \cite{sweeney2013tear}. A Síndrome do Olho Seco afeta significativamente a qualidade de vida dos pacientes comprometendo suas atividades diárias, como leitura, direção e, principalmente, atividades que envolvem o uso de computadores \cite{tong2010impact, miljanovic2007impact}.
+
+O diagnóstico da Síndrome do Olho Seco é uma tarefa desafiadora para os oftalmologistas devido à sua etiologia multifatorial. A avaliação dos padrões de interferência que categorizam a camada lipídica é um dos testes mais comuns para o diagnóstico. Esta avaliação pode ser realizada utilizando instrumentos como o Interferômetro Doane \cite{doane1989instrument} e o Tearscope Plus \cite{GUILLON1998S31}, que capturam imagens da camada lipídica permitindo aos especialistas analisar as alterações morfológicas. %Em \cite{remeseiro2015automatic} foi proposto um método de classificação para essas imagens em cinco categorias: franjas fortes, coalescente de franjas fortes, franjas finas, coalescente de franjas finas e detritos.
+
+A classificação das categorias da camada lipídica é uma tarefa clínica difícil, especialmente em camadas lipídicas mais finas que não apresentam características morfológicas e/ou coloridas. A interpretação subjetiva dos especialistas, através da inspeção visual, pode afetar a classificação e resultar em um alto grau de variabilidade inter e intra observador \cite{garcia2013new}. Portanto, é útil usar sistemas de Diagnóstico e de Detecção Auxiliados por Computador (\textit{Computer Aided Diagnosis} - CAD e \textit{Computer Aided Detection} - CADx) para dar suporte a especialistas nas interpretações das imagens. Isso pode melhorar a eficiência e aumentar a precisão do diagnóstico e, consequentemente, fornecer uma segunda opinião \cite{doi2007computer}.
+
+%Com os avanços da tecnologia da computação, por meio da natureza digital das imagens médicas geradas, a pesquisa e desenvolvimento de técnicas de processamento de imagem contribuíram para o surgimento de ferramentas CAD (\textit{Computer Aided Detection}) e CADx (\textit{Computer Aided Diagnosis}) de diversos tipos nos últimos anos. Os sistemas CAD e CADx ajudam a equipe médica na interpretação de imagens, aprimorando a eficiência e a precisão de diagnósticos e, consequentemente, proporcionam uma outra concepção \cite{doi2007computer}.
+
+%Este artigo tem como objetivo oferecer suporte aos especialistas para classificação automática das categorias dos padrões de interferência da camada lipídica, em imagens interferométricas do filme lacrimal, aplicando uma abordagem de análise de textura. Como contribuição é apresentado um novo uso das técnicas de índices de diversidade filogenética na patologia do olho seco: índices baseados em caminho mínimo, baseados na distância entre pares de espécies e baseados na topologia. Além disso, o uso da função K de Ripley em conjunto com os índices para extrair as características de textura. As técnicas poderão ainda ser incorporadas a um sistema do tipo CADx e, portanto, colaborar para o aumento da produtividade e melhoria nas taxas dos diagnósticos.
+
+Este trabalho contribui diretamente para diversas áreas. No campo da medicina, contribui no desenvolvimento de um novo método automático de diagnóstico das categorias dos padrões de interferência da camada lipídica, em imagens do filme lacrimal, através da análise da textura. Na área da computação, especificamente no processamento de imagens, contribui nos seguintes aspectos: (1) na utilização de técnicas capazes de caracterizar a textura das imagens, através da função K de \textit{Ripley} em conjunto com os índices de diversidade filogenética e (2) utilizando os algoritmos \textit{Support Vector Machine}, \textit{Random Forest}, \textit{Naive Bayes} e \textit{Bayes Net} para a tarefa de classificação das características de textura extraídas pelos índices de diversidade filogenética e a função K de \textit{Ripley}.
+
+\section{Objetivos}
+
+O objetivo geral desta dissertação é propor um método para o auxílio no diagnóstico da Síndrome do Olho Seco a partir da classificação dos padrões de interferência da camada lipídica em imagens do filme lacrimal, utilizando descritores de textura (índices de diversidade filogenética e a função K de \textit{Ripley}) e aprendizado de máquina.
+
+\subsection{Objetivos Específicos}
+
+Para alcançar o objetivo geral deste trabalho, foi necessário atingir os seguintes objetivos específicos:
+
+\begin{itemize}
+
+    %\item Adaptar técnicas de realce de imagens que propiciem uma melhoria na descrição das características de textura das imagens;
+    
+    \item Investigar índices de diversidade filogenética e a função K de \textit{Ripley} para a descrição de textura das imagens do filme lacrimal;
+    
+    \item Aplicar o algoritmo \textit{Greedy Stepwise} com o objetivo de otimizar o processo de classificação, selecionando o conjunto mínimo de características que melhor discriminam as amostras;
+    
+     \item Utilizar técnicas de aprendizado de máquina para testar as características produzidas, em relação à sua capacidade de discriminar os padrões de interferência da camada lipídica do filme lacrimal;
+     
+	\item Avaliar os métodos propostos através da realização de experimentos, utilizando bases de imagens públicas do filme lacrimal.
+\end{itemize}
+
+
+\section{Contribuições do Trabalho}
+
+O método proposto oferece uma série de contribuições para o meio científico, pode-se destacar as seguintes:
+
+\begin{itemize}
+
+    \item Utilização da análise de textura para caracterizar o padrão de interferência da camada lipídica do filme lacrimal, buscando dar aos especialistas auxílio no diagnóstico da Síndrome do Olho Seco;
+    
+    \item Aplicação de técnicas geoestatísticas com natureza local para a análise de textura e diferenciação dos padrões de interferência da camada lipídica do filme lacrimal;
+    
+    \item Aplicação dos índices de diversidade para discriminar os padrões de interferência da camada lipídica do filme lacrimal;
+    
+    \item Avaliação de uma representação de imagem para uso dos índices de diversidade filogenética e geoestatística.
+    
+\end{itemize}
+
+\section{Organização do Trabalho}
+Os demais capítulos desta dissertação foram organizados em:
+
+\begin{itemize}
+
+    \item O \textbf{Capítulo 2} apresenta um resumo dos trabalhos relacionados com o tema da pesquisa utilizando análise de textura.
+
+    \item O \textbf{Capítulo 3} trata da fundamentação teórica necessária para a construção desta pesquisa. São abordados os conceitos referentes à Síndrome do Olho Seco, índices de diversidade filogenética, função K de \textit{Ripley}, seleção de características com algoritmo \textit{Greedy Stepwise} e reconhecimento de padrões.
+
+    \item O \textbf{Capítulo 4} descreve e detalha todas as etapas dos métodos propostos por esta dissertação.
+
+    \item No \textbf{Capítulo 5} são mostrados e discutidos os resultados alcançados e um estudo comparativo com os trabalhos relacionados.
+
+    \item No \textbf{Capítulo 6} são apresentadas as considerações finais e sugestões de trabalhos futuros.
+
+\end{itemize}

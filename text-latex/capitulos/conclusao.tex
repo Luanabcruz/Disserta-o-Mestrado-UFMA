@@ -1,0 +1,60 @@
+\chapter{Conclusão}
+\phantom{2}
+
+A diferenciação dos padrões de interferência da camada lipídica, em imagens do filme lacrimal exclusivamente pela análise de textura é uma tarefa difícil, principalmente devido ao fato de ser muito comum as categorias da camada lipídica possuírem características de textura semelhantes. Neste contexto, técnicas que auxiliem o desenvolvimento de sistemas CAD e CADx são de grande contribuição para o meio científico.
+
+Nesta dissertação foi apresentado um método de classificação das categorias da camada lipídica em imagens do filme lacrimal para auxiliar no diagnóstico da Síndrome do Olho Seco. O objetivo deste trabalho foi apresentar a viabilidade da utilização dos descritores de textura baseados na geostatística e biologia para a discriminação dos padrões de interferência da camada lipídica do filme lacrimal.
+
+O método proposto foi validado através de experimentos usando as bases de imagens capturadas com o Tearscope Plus: VOPTICAL\_I1, VOPTICAL\_I2-v2 e VOPTICAL\_Is; e capturadas com o Interfêrometro Doane: VOPTICAL\_GCU. Em resumo, os descritores merecem destaque no método proposto, considerados também como as principais contribuições desta dissertação. A primeira é a adaptação e o uso dos conceitos da biologia, mais precisamente dos índices de diversidade filogenética e das árvores filogenéticas; A segunda foi a combinação da abordagem estrutural por meio da técnica LBP e a abordagem geostatística através das técnicas da função K de \textit{Ripley}.
+
+Após a etapa de extração de características, o conjunto gerado foi submetido a uma série de experimentos de classificação na etapa de reconhecimento de padrões, no qual foram utilizados os classificadores SVM, RF, NB e BN. Usando apenas o descritor K de \textit{Ripley}, os melhores resultados alcançados para as bases de imagens VOPTICAL\_I1, VOPTICAL\_I1-v2, VOPTICAL\_Is e VOPTICAL\_GCU foram obtidos ao utilizar o algoritmo \textit{Greedy Stepwise} para seleção automática das características mais relevantes, onde foram alcançados média de acurácia de 99,23\%, 93,12\%, 83,39\% e 95,28\% para as respectivas bases de imagens.
+
+O melhor resultado dos experimentos usando o descritor dos índices de diversidade filogenética para a base de imagens VOPTICAL\_GCU foi aplicando todos os índices de diversidade filogenética, onde alcançou uma média de acurácia de 97,36\%. Por fim, a combinação de todos os índices de diversidade filogenética, a função K de \textit{Ripley} e a seleção de características, apresentou o melhor resultado para a base em questão, resultando em uma média de acurácia de 99,81\%.
+
+Os resultados alcançados nesta dissertação são considerados promissores, sendo comparáveis aos melhores trabalhos descritos na literatura. A partir dos valores obtidos foi possível demonstrar que a utilização dos descritores de textura é bastante viável para caracterização dos padrões de interferência da camada lipídica do filme lacrimal e, portanto, poderão ser utilizados em metodologias CADx para auxílio do diagnóstico da Síndrome do Olho Seco.
+
+Apesar de ter obtido bons resultados no geral, o método proposto possui alguns experimentos que podem ser realizados para melhorar alguns resultados, entre os quais citam-se: a realização de experimentos com os descritores dos índices de diversidade filogenética para as imagens das bases capturadas com o Tearscope Plus, pois nesta pesquisa não foi possível a realização do mesmo, devido ao tempo de conclusão do mestrado.
+
+Conforme apresentado nos trabalhos relacionados, existe um grande interesse da comunidade científica em pesquisas na área médica, devido a relevância deste tema. Desta forma, espera-se que os frutos desta pesquisa possam ser utilizados no futuro em novas metodologias, de modo que sejam sanadas algumas de suas limitações. Assim, como sugestão para trabalhos futuros estão:
+
+\begin{enumerate}
+    \item Realizar experimentos com os índices de diversidade filogenética nas imagens das bases capturadas com o Tearscope Plus;
+    
+    \item Investigar a aplicabilidade de novos índices de diversidade, como os índices funcionais, que possuem como objetivo analisar as relações entre as espécies e possíveis características, como evolução;
+    
+    \item Usar variações do LBP para geração dos padrões como os algoritmos de LBP circular e de
+    \textit{Completed Local Binary Pattern} (CLBP), visto que estas abordagens analisam um número maior de vizinhos no cálculo do LBP, por serem circulares;
+    
+    \item Avaliar outras técnicas de estatística espacial como, índice de \textit{Moran}, de \textit{Getis} e Coeficiente de \textit{Geary};
+    
+    \item Analisar a textura da ROI em outras sub-regiões, como máscaras internas e externas, horizontal, vertical, janelas e também, em outros espaços de cores;
+    
+    \item Utilizar outro método de seleção de características para redução da dimensionalidade de características usando a função K de \textit{Ripley};
+    
+    \item Realizar testes com outras técnicas de aprendizado de máquina, como abordagens de aprendizagem profunda, ou outros classificadores como \textit{Random Tree}, \textit{Multilayer Perceptron} e \textit{AdaBoost};
+    
+    \item Aplicar o método proposto para a caracterização de textura de anormalidades de outros tipos de imagens como, por exemplo, de mama; e
+    
+    \item Empregar o método proposto para outros tipos de imagens, tais como imagens de tomografia de coerência óptica.
+    
+\end{enumerate}
+
+\section{Produções Científicas}
+
+A \autoref{tab:artigos} apresenta a lista de artigos científicos publicados e submetidos que possuem relação com o método proposto neste trabalho.
+
+\definecolor{lightgray}{gray}{0.94}
+\begin{table}[!ht]
+\centering
+%\onehalfspacing
+\rowcolors{1}{}{lightgray}
+\caption{Artigos submetidos e publicados do mestrado. Legenda: Publicado (PU) e submetido (SU).}
+\label{tab:artigos}
+\begin{tabular}{cp{10cm}ccc}
+\hline
+\textbf{Local} & \centering \textbf{Artigo} & \textbf{Qualis} & \textbf{Status} \\ \hline \hline
+Simpósio & \textbf{CRUZ, L. B.}; ARAÚJO, J. D.; SOUSA, J. A.; ALMEIDA, J. D.; JÚNIOR, G. B.; SILVA, A. C.; PAIVA, A. C. Classificação do Filme Lacrimal usando a Função K de Ripley como Descritor de Textura. Simpósio Brasileiro de Computação Aplicada à Saúde (SBCAS\_CSBC), v. 18, n. 1/2018, 2018. & B4 & PU \\
+Simpósio & \textbf{CRUZ, L. B.}; ARAÚJO, J. D. L.; SOUZA, J. C.; SOUSA, J. A.; ALMEIDA, J. D. S.; JUNIOR, G. B.; SILVA, A. C.; PAIVA, A. C. Tear Film Classification Using Phylogenetic Diversity Indexes as Texture Descriptor. In: 2018 IEEE Symposium on Computers and Communications (ISCC). IEEE, 2018. p. 00853-00858. & A2 & PU \\
+Periódico & \textbf{CRUZ, L. B.}; SOUZA, J. C.; SOUSA, J. A.; SANTOS, A. M.; PAIVA, A. C.; ALMEIDA, J. D. S.; SILVA, A. C.; JÚNIOR, G. B. Dry Eye Classification in Interferometry Images using Phylogenetic Diversity Indexes. Journal of Visual Communication and Image Representation. & A2 & SU \\ \hline
+\end{tabular}
+\end{table}
