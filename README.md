@@ -8,5 +8,5 @@ A Síndrome do Olho Seco é uma das doenças oculares mais frequentemente relata
 
 # Arquivos
 
-Repositório da base de imagens capturadas com o Interferômetro Doane e  Tearscope Plus
+Repositório das bases de imagens capturadas com o Interferômetro Doane e o Tearscope Plus
  - http://www.varpa.org/research/optics.html
